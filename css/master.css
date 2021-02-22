@@ -21,6 +21,10 @@
   color: #797b80;
 }
 
+a{
+  text-decoration: none;
+}
+
 /* regole nav */
 nav{
   /* regole debug */
@@ -31,6 +35,7 @@ nav{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow-x: scroll;
 }
 
 nav ul{
@@ -79,22 +84,70 @@ main{
 }
 
 #maincentral ul{
+  display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
 }
 
-#maincentral li{
+.section{
+  padding-left: 30px;
+  padding-bottom: 50px;
+}
+
+.section span{
   display: inline-block;
 }
 
+.section.second li,
+.section.third li,
+.section.four li{
+  max-width: 200px;
+  padding-right: 30px;
+}
+
 .container-playlist{
-  /* flex-basis: calc(100% / 6); */
   text-align: center;
 }
 
 .container-playlist>img{
-  width: 50%;
+  width: 100%;
 }
 
+.container-playlist h4{
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+/* regole prima sezione */
+.section.first ul{
+  padding-top: 30px;
+  justify-content: center;
+}
+
+.section.first li{
+  padding-right: 20px;
+}
+
+/* regole seconda seczione */
+.section.second h3{
+  padding-bottom: 30px;
+}
+
+/* regole terza sezione e quarta gnerali */
+.section.third h3,
+.section.four h3{
+  padding-bottom: 10px;
+}
+
+.section.third span,
+.section.four span{
+  padding-bottom: 30px;
+}
+
+/* regole sezione 4 */
+.section.four .container-playlist>img{
+  border-radius: 50%;
+}
 
 /* regole footer */
 footer{
