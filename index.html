@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <title>Spotify - Lettore Web</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+    <!-- font google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <!-- lib fontawsome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="css/master.css">
@@ -11,87 +14,103 @@
   <body>
     <div id="container">
       <nav>
-        <div class="list-item">
-          <ul>
+        <div class="">
+          <ul class="list-first">
             <li id="logo">
               <a href="#">
-                test
+                <img class="none" src="img/logo.svg" alt="">
+                <img class="block" src="img/logo-small.svg" alt="">
               </a>
             </li>
             <li>
               <a class="textgrey" href="#">
-                test
+                <img src="img/home.svg" alt="">
+                <span class="none">Home</span>
               </a>
             </li>
             <li>
               <a class="textgrey" href="#">
-                test
+                <img src="img/search.svg" alt="">
+                <span class="none">Cerca</span>
               </a>
             </li>
             <li>
               <a class="textgrey" href="#">
-                test
+                <img src="img/libreria.svg" alt="">
+                <span class="none">La tua Libreria</span>
               </a>
             </li>
           </ul>
 
-          <ul>
+          <ul class="none">
             <li>
               <h4 class="textwhite">PLAYLIST</h4>
             </li>
-            <li>
+            <li id="newplaylist">
               <a class="textgrey" href="#">
-                test
+                <i class="fas fa-plus-square"></i>
+                <span>Crea Playlist</span>
               </a>
             </li>
             <li>
               <a class="textgrey" href="#">
-                test
+                Playlist di Lorenzo
               </a>
             </li>
             <li>
               <a class="textgrey" href="#">
-                test
+                Playlist Aereo
               </a>
             </li>
             <li>
               <a class="textgrey" href="#">
-                test
+                Playlist Work-Out
               </a>
             </li>
             <li>
               <a class="textgrey" href="#">
-                test
+                Playlist Work
               </a>
             </li>
             <li>
               <a class="textgrey" href="#">
-                test
+                Playlist Fun
               </a>
             </li>
             <li>
               <a class="textgrey" href="#">
-                test
+                Nuova Playlist
               </a>
             </li>
             <li>
               <a class="textgrey" href="#">
-                test
+                Nuova Playlist
               </a>
             </li>
           </ul>
         </div>
 
-        <div class="end">
-          <span class="textgrey">Installa app</span>
-          <hr>
-          <span class="textwhite">Lorenzo</span>
+        <div id="infoutente">
+          <a class="textgrey" href="#">
+            <i class="fas fa-arrow-down"></i>
+            <span class="none">
+              Installa app
+            </span>
+          </a>
+          <hr class="none">
+          <a class="textwhite" href="#">
+            <img src="img/profile.svg" alt="">
+            <span class="none">
+              Lorenzo Antonelli
+            </span>
+          </a>
         </div>
-
       </nav>
       <main>
         <div id="maintop">
-
+          <a class="textwhite" href="#">
+            EFFETTUA L'UPGRADE
+          </a>
         </div>
         <div id="maincentral">
           <section class="section first">
@@ -129,13 +148,13 @@
             </ul>
           </section>
           <section class="section second">
-            <h3 class="textwhite">
+            <h2 class="textwhite">
               Recent played
-            </h3>
+            </h2>
             <ul>
               <li>
                 <div class="container-playlist">
-                  <img src="img/aquietplace.jpeg" alt="">
+                  <img src="img/metal_lifting.jpg" alt="">
                   <h4 class="textwhite">
                     Heavy Metal
                   </h4>
@@ -146,9 +165,20 @@
               </li>
               <li>
                 <div class="container-playlist">
+                  <img src="img/stranger.jpeg" alt="">
+                  <h4 class="textwhite">
+                    Stranger Things, Vol.1(a Netflix Original Series Soundtrack)
+                  </h4>
+                  <span class="textdarkgrey">
+                    Kyle Dixon & Michael Stein
+                  </span>
+                </div>
+              </li>
+              <li>
+                <div class="container-playlist">
                   <img src="img/aquietplace.jpeg" alt="">
                   <h4 class="textwhite">
-                    Heavy Metal
+                    A qulet place
                   </h4>
                   <span class="textdarkgrey">
                     Subtitle
@@ -157,9 +187,9 @@
               </li>
               <li>
                 <div class="container-playlist">
-                  <img src="img/aquietplace.jpeg" alt="">
+                  <img src="img/split.jpeg" alt="">
                   <h4 class="textwhite">
-                    Heavy Metal
+                    Split
                   </h4>
                   <span class="textdarkgrey">
                     Subtitle
@@ -168,9 +198,9 @@
               </li>
               <li>
                 <div class="container-playlist">
-                  <img src="img/aquietplace.jpeg" alt="">
+                  <img src="img/cure.jpeg" alt="">
                   <h4 class="textwhite">
-                    Heavy Metal
+                    A cure for wellness
                   </h4>
                   <span class="textdarkgrey">
                     Subtitle
@@ -179,20 +209,9 @@
               </li>
               <li>
                 <div class="container-playlist">
-                  <img src="img/aquietplace.jpeg" alt="">
+                  <img src="img/sinister.jpeg" alt="">
                   <h4 class="textwhite">
-                    Heavy Metal
-                  </h4>
-                  <span class="textdarkgrey">
-                    Subtitle
-                  </span>
-                </div>
-              </li>
-              <li>
-                <div class="container-playlist">
-                  <img src="img/aquietplace.jpeg" alt="">
-                  <h4 class="textwhite">
-                    Heavy Metal
+                    Sinister
                   </h4>
                   <span class="textdarkgrey">
                     Subtitle
@@ -202,52 +221,52 @@
             </ul>
           </section>
           <section class="section third">
-            <h3 class="textwhite">
-              Recent played
-            </h3>
+            <h2 class="textwhite">
+              Creato per Lorenzo Antonelli
+            </h2>
             <span class="textdarkgrey">
               Più ascolti, più accurati saranno i suggerimenti.
             </span>
             <ul>
               <li>
                 <div class="container-playlist">
-                  <img src="img/aquietplace.jpeg" alt="">
+                  <img src="img/radar.jpeg" alt="">
                   <h4 class="textwhite">
-                    Heavy Metal
+                    Release Radar
                   </h4>
                 </div>
               </li>
               <li>
                 <div class="container-playlist">
-                  <img src="img/aquietplace.jpeg" alt="">
+                  <img src="img/mixdaily.jpeg" alt="">
                   <h4 class="textwhite">
-                    Heavy Metal
+                    Daily Mix 1
                   </h4>
                 </div>
               </li>
             </ul>
           </section>
           <section class="section four">
-            <h3 class="textwhite">
-              Recent played
-            </h3>
+            <h2 class="textwhite">
+              Artisti più popolari
+            </h2>
             <span class="textdarkgrey">
               Più ascolti, più accurati saranno i suggerimenti.
             </span>
             <ul>
               <li>
                 <div class="container-playlist">
-                  <img src="img/aquietplace.jpeg" alt="">
+                  <img src="img/youg.jpeg" alt="">
                   <h4 class="textwhite">
-                    Heavy Metal
+                    Lana del Ray
                   </h4>
                 </div>
               </li>
               <li>
                 <div class="container-playlist">
-                  <img src="img/aquietplace.jpeg" alt="">
+                  <img src="img/einaudi.jpeg" alt="">
                   <h4 class="textwhite">
-                    Heavy Metal
+                    Ludovico Einaudi
                   </h4>
                 </div>
               </li>

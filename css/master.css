@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
 #container{
   display: flex;
 }
@@ -47,14 +51,87 @@ nav li{
   padding-bottom: 15px;
 }
 
+.list-first a{
+  display: flex;
+}
+
+.list-first img{
+  width: 25px;
+}
+
+.list-first span{
+  align-self: flex-end;
+  padding-left: 15px;
+}
+
 #logo{
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
+}
+
+.block{
+  display: none;
+}
+
+#logo .none{
+  min-width: 150px;
+}
+
+#newplaylist a{
+  display: flex;
+}
+
+#newplaylist i{
+  font-size: 40px;
+}
+
+#newplaylist span{
+  align-self: center;
+  padding-left: 15px;
+}
+
+.fas.fa-arrow-down{
+  font-size: 10px;
+  padding: 2px;
+  border: 2px solid #a3a3a3;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+#infoutente a{
+  display: flex;
+}
+
+#infoutente span{
+  align-self: center;
+}
+
+#infoutente img{
+  width: 30px;
+  background-color: #808080;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+#infoutente hr{
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 @media all and (max-width: 535px){
   nav{
     width: 50px;
+  }
+
+  .none{
+    display: none;
+  }
+
+  #logo .block{
+    display: block;
+  }
+
+  .list-first img{
+    width: 20px;
   }
 }
 
@@ -70,6 +147,16 @@ main{
   width: 100%;
   height: 89px;
   background-color: rgba(8,11,18,255);
+  position: relative;
+}
+
+#maintop a{
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: 10px 60px;
+  position: absolute;
+  top: 25%;
+  right: 5%;
 }
 
 /* regole main central */
@@ -78,9 +165,6 @@ main{
   height: calc(100% - 89px);
   background-color: #141922;
   overflow-y: scroll;
-  /* display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; */
 }
 
 #maincentral ul{
@@ -101,12 +185,13 @@ main{
 .section.second li,
 .section.third li,
 .section.four li{
-  max-width: 200px;
+  max-width: 250px;
   padding-right: 30px;
 }
 
 .container-playlist{
   text-align: center;
+  position: relative;
 }
 
 .container-playlist>img{
@@ -120,22 +205,30 @@ main{
 
 /* regole prima sezione */
 .section.first ul{
-  padding-top: 30px;
   justify-content: center;
 }
 
 .section.first li{
-  padding-right: 20px;
+  padding-right: 40px;
+  padding-top: 40px;
+}
+
+@media all and (max-width: 711px){
+  .section.second li,
+  .section.third li,
+  .section.four li{
+    max-width: 50%;
+  }
 }
 
 /* regole seconda seczione */
-.section.second h3{
+.section.second h2{
   padding-bottom: 30px;
 }
 
 /* regole terza sezione e quarta gnerali */
-.section.third h3,
-.section.four h3{
+.section.third h2,
+.section.four h2{
   padding-bottom: 10px;
 }
 
