@@ -39,7 +39,7 @@ nav{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow-x: scroll;
+  overflow: scroll;
 }
 
 nav ul{
@@ -75,6 +75,10 @@ nav li{
 #logo .none{
   min-width: 150px;
 }
+
+/* #secondlist{
+  overflow: auto;
+} */
 
 #newplaylist a{
   display: flex;
@@ -135,6 +139,22 @@ nav li{
   }
 }
 
+/* @media all and (max-height: 735px) {
+  #second-list{
+    max-height: 40vh;
+  }
+}
+@media all and (max-height: 680px) {
+  #second-list{
+    max-height: 38vh;
+  }
+}
+@media all and (max-height: 630px) {
+    #second-list{
+      max-height: 34vh;
+    }
+} */
+
 /* regole main */
 main{
   /* regole debug */
@@ -147,16 +167,15 @@ main{
   width: 100%;
   height: 89px;
   background-color: rgba(8,11,18,255);
-  position: relative;
+  text-align: right;
 }
 
 #maintop a{
   border: 1px solid #fff;
   border-radius: 20px;
   padding: 10px 60px;
-  position: absolute;
-  top: 25%;
-  right: 5%;
+  line-height: 89px;
+  margin-right: 10px;
 }
 
 /* regole main central */
@@ -180,21 +199,43 @@ main{
 
 .section span{
   display: inline-block;
+  padding-bottom: 30px;
 }
 
 .section.second li,
 .section.third li,
 .section.four li{
-  max-width: 250px;
+  max-width: 260px;
   padding-right: 30px;
 }
 
 .container-playlist{
   text-align: center;
+}
+
+.content-img{
   position: relative;
 }
 
-.container-playlist>img{
+.content-img i{
+  font-size: 70px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.content-img:hover i{
+  display: block;
+}
+
+.content-img:hover img{
+  opacity: 0.5;
+}
+
+.container-playlist img{
   width: 100%;
 }
 
@@ -213,7 +254,7 @@ main{
   padding-top: 40px;
 }
 
-@media all and (max-width: 711px){
+@media all and (max-width: 732px){
   .section.second li,
   .section.third li,
   .section.four li{
@@ -238,7 +279,7 @@ main{
 }
 
 /* regole sezione 4 */
-.section.four .container-playlist>img{
+.section.four .container-playlist img{
   border-radius: 50%;
 }
 
@@ -247,4 +288,71 @@ footer{
   width: 100%;
   height: 91px;
   background-color: #282828;
+  display: flex;
+}
+
+.barra{
+  display: inline-block;
+  border: 2px solid #a3a3a3;
+  border-radius: 2px;
+}
+
+/* regole info song */
+.info-song>img{
+  width: 60px;
+  padding-right: 10px;
+}
+
+.track{
+  display: inline-block;
+  padding-right: 50px;
+}
+
+.track.name>span{
+  font-size: 12px;
+}
+
+.track.favorite i{
+  padding-right: 15px;
+}
+
+/* regole info play */
+.info-play{
+  min-width: 50%;
+  text-align: center;
+}
+
+.barra.music{
+  width: 50%;
+}
+
+.info-play i{
+  font-size: 20px;
+}
+
+.info-play .far.fa-play-circle{
+  font-size: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.info-play .fas.fa-step-backward{
+  padding-left: 10px;
+}
+
+.info-play .fas.fa-step-forward{
+  padding-right: 10px;
+}
+/* regole info volume */
+.info-volume{
+  width: 30%;
+  text-align: right;
+}
+
+.info-volume .textwhite{
+  display: inline-block;
+}
+
+.barra.volume{
+  width: 25%;
 }
