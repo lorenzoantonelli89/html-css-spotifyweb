@@ -39,10 +39,9 @@ nav{
   width: 230px;
   height: calc(100vh - 91px);
   background-color: #000000;
-  padding: 20px 20px;
+  padding: 20px 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   overflow: scroll;
 }
 
@@ -55,6 +54,15 @@ nav li{
   padding-bottom: 15px;
 }
 
+nav a{
+  padding-left: 20px;
+}
+
+nav h4{
+  padding-left: 20px;
+}
+
+/* regole primo container nav */
 .list-first a{
   display: flex;
 }
@@ -68,6 +76,10 @@ nav li{
   padding-left: 15px;
 }
 
+nav li .active{
+  border-left: 2px solid #adff2f;
+}
+
 #logo{
   padding-bottom: 20px;
 }
@@ -77,7 +89,13 @@ nav li{
 }
 
 #logo .none{
-  min-width: 150px;
+  width: 150px;
+}
+
+/* regole secondo container nav */
+
+.container-side-central{
+  flex-grow: 1;
 }
 
 #newplaylist a{
@@ -93,33 +111,39 @@ nav li{
   padding-left: 15px;
 }
 
-.fas.fa-arrow-down{
-  font-size: 10px;
-  padding: 2px;
+/* regole terzo container nav */
+.container-side-bottom .fas.fa-arrow-down{
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+  padding: 1px 0 0 2px;
   border: 2px solid #a3a3a3;
-  border-radius: 50%;
+  border-radius: 100%;
   margin-right: 10px;
 }
 
-#infoutente a{
+.container-side-bottom a{
   display: flex;
 }
 
-#infoutente span{
+.container-side-bottom span{
   align-self: center;
 }
 
-#infoutente img{
+.container-side-bottom img{
   width: 30px;
+  height: 30px;
   background-color: #808080;
   border-radius: 50%;
   margin-right: 10px;
 }
 
-#infoutente hr{
+.container-side-bottom hr{
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+
 
 @media all and (max-width: 535px){
   nav{
@@ -134,8 +158,24 @@ nav li{
     display: block;
   }
 
-  .list-first img{
-    min-width: 20px;
+  #logo img{
+    width: 35px;
+    margin-left: 7px;
+  }
+
+  nav a{
+    padding-left: 10px;
+  }
+
+  .container-side-bottom .fas.fa-arrow-down{
+    margin-bottom: 10px;
+    padding: 0 2px 2px 2px;
+  }
+
+  .container-side-bottom img{
+    width: 20px;
+    height: 20px;
+    margin-right: 0;
   }
 }
 
@@ -157,9 +197,13 @@ main{
 #maintop a{
   border: 1px solid #fff;
   border-radius: 20px;
-  padding: 10px 60px;
+  padding: 5px 20px;
   line-height: 89px;
   margin-right: 10px;
+}
+
+#maintop a:hover{
+  transform: scale(1.1);
 }
 
 /* regole main central */
@@ -186,11 +230,15 @@ main{
   padding-bottom: 30px;
 }
 
-.section.second li,
+.section.second li{
+  max-width: calc((100% / 6) - 20px);
+  margin-right: 20px;
+}
+
 .section.third li,
 .section.four li{
-  max-width: 260px;
-  padding-right: 30px;
+  max-width: 300px;
+  margin-right: 20px;
 }
 
 .container-playlist{
@@ -216,7 +264,7 @@ main{
 }
 
 .content-img:hover img{
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 .container-playlist img{
@@ -238,11 +286,19 @@ main{
   padding-top: 40px;
 }
 
+.section.first .active{
+  border-bottom: 2px solid #adff2f;
+}
+
+@media all and (min-width: 733px) and (max-width: 870px){
+  .section.second li{
+    max-width: calc((100% / 4) - 20px);
+  }
+}
+
 @media all and (max-width: 732px){
-  .section.second li,
-  .section.third li,
-  .section.four li{
-    max-width: 50%;
+  .section.second li{
+    max-width: calc((100% / 2) - 20px);
   }
 }
 
@@ -296,7 +352,7 @@ footer{
   font-size: 10px;
   color: #fff;
   position: absolute;
-  top: -4px;
+  top: -5px;
   left: 28%;
   display: none;
 }
@@ -311,29 +367,27 @@ footer{
 
 /* regole info song */
 .info-song{
-  min-width: 5%;
-  padding-left: 10px;
+  width: 15%;
+  padding-left: 0.5%;
   display: flex;
   align-items: center;
 }
 
 .info-song>img{
-  width: 60px;
-  padding-right: 10px;
+  width: 22%;
+  padding-right: 2%;
 }
 
 .track{
   display: inline-block;
-  padding-right: 40px;
+}
+
+.track.name{
+  padding-right: 7%;
 }
 
 .track.name>span{
   font-size: 12px;
-}
-
-.track.favorite{
-  /* display: flex;
-  flex-wrap: wrap; */
 }
 
 .track.favorite i{
@@ -342,7 +396,7 @@ footer{
 
 /* regole info play */
 .info-play{
-  min-width: 25%;
+  width: 22%;
   align-self: center;
 }
 
@@ -375,24 +429,22 @@ footer{
 
 .info-play .far.fa-play-circle{
   font-size: 35px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .info-play .fas.fa-step-backward{
-  padding-left: 10px;
+  padding-left: 3%;
 }
 
 .info-play .fas.fa-step-forward{
-  padding-right: 10px;
+  padding-right: 3%;
 }
 /* regole info volume */
 .info-volume{
-  min-width:  15%;
-  padding-right: 10px;
+  width: 20%;
   display: flex;
   align-items: center;
-  /* justify-content: flex-end; */
 }
 
 .info-volume .textwhite{
