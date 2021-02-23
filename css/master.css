@@ -29,6 +29,10 @@ a{
   text-decoration: none;
 }
 
+a:hover{
+  color: #fff;
+}
+
 /* regole nav */
 nav{
   /* regole debug */
@@ -75,10 +79,6 @@ nav li{
 #logo .none{
   min-width: 150px;
 }
-
-/* #secondlist{
-  overflow: auto;
-} */
 
 #newplaylist a{
   display: flex;
@@ -135,25 +135,9 @@ nav li{
   }
 
   .list-first img{
-    width: 20px;
+    min-width: 20px;
   }
 }
-
-/* @media all and (max-height: 735px) {
-  #second-list{
-    max-height: 40vh;
-  }
-}
-@media all and (max-height: 680px) {
-  #second-list{
-    max-height: 38vh;
-  }
-}
-@media all and (max-height: 630px) {
-    #second-list{
-      max-height: 34vh;
-    }
-} */
 
 /* regole main */
 main{
@@ -289,15 +273,50 @@ footer{
   height: 91px;
   background-color: #282828;
   display: flex;
+  justify-content: space-between;
 }
 
 .barra{
   display: inline-block;
-  border: 2px solid #a3a3a3;
+  border: 2px solid #797b80;
   border-radius: 2px;
+  position: relative;
+}
+
+.progression{
+  width: 30%;
+  border: 2px solid #fff;
+  border-radius: 2px;
+  position: absolute;
+  top: -2px;
+  left: -1px;
+}
+
+.fas.fa-circle{
+  font-size: 10px;
+  color: #fff;
+  position: absolute;
+  top: -4px;
+  left: 28%;
+  display: none;
+}
+
+.barra:hover .progression{
+  border: 2px solid #34ec72;
+}
+
+.barra:hover .fas.fa-circle{
+  display: block;
 }
 
 /* regole info song */
+.info-song{
+  min-width: 5%;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
 .info-song>img{
   width: 60px;
   padding-right: 10px;
@@ -305,11 +324,16 @@ footer{
 
 .track{
   display: inline-block;
-  padding-right: 50px;
+  padding-right: 40px;
 }
 
 .track.name>span{
   font-size: 12px;
+}
+
+.track.favorite{
+  /* display: flex;
+  flex-wrap: wrap; */
 }
 
 .track.favorite i{
@@ -318,12 +342,31 @@ footer{
 
 /* regole info play */
 .info-play{
-  min-width: 50%;
-  text-align: center;
+  min-width: 25%;
+  align-self: center;
 }
 
 .barra.music{
-  width: 50%;
+  width: 100%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.info-play div:first-child{
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-play div:last-child{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-play span{
+  font-size: 10px;
 }
 
 .info-play i{
@@ -331,7 +374,7 @@ footer{
 }
 
 .info-play .far.fa-play-circle{
-  font-size: 30px;
+  font-size: 35px;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -345,8 +388,11 @@ footer{
 }
 /* regole info volume */
 .info-volume{
-  width: 30%;
-  text-align: right;
+  min-width:  15%;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  /* justify-content: flex-end; */
 }
 
 .info-volume .textwhite{
@@ -354,5 +400,9 @@ footer{
 }
 
 .barra.volume{
-  width: 25%;
+  width: 55%;
+}
+
+.info-volume i{
+  padding-right: 10px;
 }
