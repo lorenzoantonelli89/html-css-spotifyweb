@@ -35,13 +35,13 @@ a:hover{
 
 /* regole nav */
 nav{
-  width: 230px;
+  min-width: 230px;
   height: calc(100vh - 91px);
   background-color: #000000;
   padding: 20px 0;
   display: flex;
   flex-direction: column;
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 nav ul{
@@ -59,6 +59,7 @@ nav a{
 
 nav h4{
   padding-left: 20px;
+  padding-bottom: 15px;
 }
 
 /* regole primo container nav */
@@ -97,8 +98,13 @@ nav li .active{
   flex-grow: 1;
 }
 
-#newplaylist a{
+.container-side-central ul{
+  overflow: scroll;
+}
+
+#newplaylist{
   display: flex;
+  padding-bottom: 15px;
 }
 
 #newplaylist i{
@@ -145,10 +151,10 @@ nav li .active{
 /* media nav */
 @media all and (max-width: 535px){
   nav{
-    width: 50px;
+    min-width: 50px;
   }
 
-  .none{
+  .none, #newplaylist{
     display: none;
   }
 
@@ -195,13 +201,14 @@ main{
 #maintop a{
   border: 1px solid #fff;
   border-radius: 20px;
-  padding: 5px 20px;
+  padding: 10px 25px;
   line-height: 89px;
   margin-right: 10px;
+  /* transition: transform 4s; */
 }
 
 #maintop a:hover{
-  transform: scale(1.1);
+  font-size: 20px;
 }
 
 /* regole main central */
@@ -209,7 +216,7 @@ main{
   width: 100%;
   height: calc(100% - 89px);
   background-color: #141922;
-  overflow-y: scroll;
+  overflow: scroll;
 }
 
 #maincentral ul{
@@ -428,16 +435,16 @@ footer{
 
 .info-play .far.fa-play-circle{
   font-size: 35px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .info-play .fas.fa-step-backward{
-  margin-left: 5px;
+  margin-left: 20px;
 }
 
 .info-play .fas.fa-step-forward{
-  margin-right: 5px;
+  margin-right: 20px;
 }
 /* regole info volume */
 .info-volume{
