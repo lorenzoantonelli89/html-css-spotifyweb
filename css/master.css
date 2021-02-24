@@ -35,7 +35,6 @@ a:hover{
 
 /* regole nav */
 nav{
-  /* regole debug */
   width: 230px;
   height: calc(100vh - 91px);
   background-color: #000000;
@@ -143,8 +142,7 @@ nav li .active{
   margin-bottom: 10px;
 }
 
-
-
+/* media nav */
 @media all and (max-width: 535px){
   nav{
     width: 50px;
@@ -290,18 +288,6 @@ main{
   border-bottom: 2px solid #adff2f;
 }
 
-@media all and (min-width: 733px) and (max-width: 870px){
-  .section.second li{
-    max-width: calc((100% / 4) - 20px);
-  }
-}
-
-@media all and (max-width: 732px){
-  .section.second li{
-    max-width: calc((100% / 2) - 20px);
-  }
-}
-
 /* regole seconda seczione */
 .section.second h2{
   padding-bottom: 30px;
@@ -321,6 +307,19 @@ main{
 /* regole sezione 4 */
 .section.four .container-playlist img{
   border-radius: 50%;
+}
+
+/* media sezioni main central */
+@media all and (min-width: 733px) and (max-width: 870px){
+  .section.second li{
+    max-width: calc((100% / 4) - 20px);
+  }
+}
+
+@media all and (max-width: 732px){
+  .section.second li{
+    max-width: calc((100% / 2) - 20px);
+  }
 }
 
 /* regole footer */
@@ -367,14 +366,14 @@ footer{
 
 /* regole info song */
 .info-song{
-  width: 15%;
+  width: 25%;
   padding-left: 0.5%;
   display: flex;
   align-items: center;
 }
 
 .info-song>img{
-  width: 22%;
+  width: 20%;
   padding-right: 2%;
 }
 
@@ -429,16 +428,16 @@ footer{
 
 .info-play .far.fa-play-circle{
   font-size: 35px;
-  padding-left: 5%;
-  padding-right: 5%;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .info-play .fas.fa-step-backward{
-  padding-left: 3%;
+  margin-left: 5px;
 }
 
 .info-play .fas.fa-step-forward{
-  padding-right: 3%;
+  margin-right: 5px;
 }
 /* regole info volume */
 .info-volume{
@@ -457,4 +456,50 @@ footer{
 
 .info-volume i{
   padding-right: 10px;
+}
+
+/* media footer */
+
+@media all and (min-width: 536px) and (max-width: 1004px){
+  .info-song{
+    width: 25%;
+  }
+
+  .info-play{
+    width: 40%;
+  }
+
+  .info-volume{
+    width: 25%;
+  }
+
+  .barra.volume{
+    width: 30%;
+  }
+}
+
+@media all and (max-width: 535px){
+  .info-song{
+    width: 30%;
+  }
+
+  .info-song>img{
+    width: 35%;
+  }
+
+  .info-play{
+    width: 37%;
+  }
+
+  .barra.music{
+    width: 54%;
+  }
+
+  .info-volume{
+    width: 30%;
+  }
+
+  .barra.volume{
+    width: 30%;
+  }
 }
