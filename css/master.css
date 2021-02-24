@@ -25,6 +25,14 @@ body{
   color: #797b80;
 }
 
+.active{
+  position: relative;
+}
+
+.greenline{
+  background-color: #adff2f;
+}
+
 a{
   text-decoration: none;
 }
@@ -76,8 +84,12 @@ nav h4{
   padding-left: 15px;
 }
 
-nav li .active{
-  border-left: 2px solid #adff2f;
+nav li .greenline{
+  height: 25px;
+  width: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 #logo{
@@ -100,6 +112,7 @@ nav li .active{
 
 .container-side-central ul{
   overflow: scroll;
+  max-height: 30vh;
 }
 
 #newplaylist{
@@ -144,6 +157,8 @@ nav li .active{
 }
 
 .container-side-bottom hr{
+  width: 210px;
+  margin-left: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -185,7 +200,6 @@ nav li .active{
 
 /* regole main */
 main{
-  /* regole debug */
   width: 100%;
   height: calc(100vh - 91px);
 }
@@ -194,7 +208,7 @@ main{
 #maintop{
   width: 100%;
   height: 89px;
-  background-color: rgba(8,11,18,255);
+  background-color: rgba(8,11,18,1);
   text-align: right;
 }
 
@@ -291,8 +305,12 @@ main{
   padding-top: 40px;
 }
 
-.section.first .active{
-  border-bottom: 2px solid #adff2f;
+.section.first li .greenline{
+  width: 30%;
+  height: 3px;
+  position: absolute;
+  top: 100%;
+  left: 25%;
 }
 
 /* regole seconda seczione */
@@ -336,6 +354,8 @@ footer{
   background-color: #282828;
   display: flex;
   justify-content: space-between;
+  position: relative;
+  z-index: 900;
 }
 
 .barra{
