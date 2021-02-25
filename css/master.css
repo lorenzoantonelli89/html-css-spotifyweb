@@ -201,7 +201,7 @@ nav li .greenline{
 
 /* regole main top */
 #maintop{
-  width: 100%;
+  width: calc(100% - 230px);
   height: 89px;
   text-align: right;
   background-color: rgba(0, 0, 0, 0.5);
@@ -215,7 +215,7 @@ nav li .greenline{
   display: inline-block;
   height: 40px;
   margin-top: 24px;
-  margin-right: 14%;
+  margin-right: 3%;
   padding: 10px 25px;
   border: 1px solid #fff;
   border-radius: 20px;
