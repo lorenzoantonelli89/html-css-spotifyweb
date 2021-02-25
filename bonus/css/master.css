@@ -128,6 +128,10 @@ nav li .greenline{
   padding-left: 15px;
 }
 
+#newplaylist i:hover{
+  color: #adff2f;
+}
+
 /* regole terzo container nav */
 .container-side-bottom .fas.fa-arrow-down{
   width: 20px;
@@ -220,6 +224,7 @@ nav li .greenline{
 
 #maintop a:hover{
   transform: scale(1.2);
+  color: #adff2f;
 }
 
 /* regole main central */
@@ -246,11 +251,6 @@ nav li .greenline{
   padding-bottom: 30px;
 }
 
-.section.second li{
-  max-width: calc((100% / 6) - 20px);
-  margin-right: 20px;
-}
-
 .section.third li,
 .section.four li{
   max-width: 300px;
@@ -259,6 +259,10 @@ nav li .greenline{
 
 .container-playlist{
   text-align: center;
+}
+
+.container-playlist:hover{
+  transform: scale(1.1);
 }
 
 .content-img{
@@ -315,6 +319,11 @@ nav li .greenline{
   padding-bottom: 30px;
 }
 
+.section.second li{
+  max-width: calc((100% / 6) - 20px);
+  margin-right: 20px;
+}
+
 /* regole terza sezione e quarta gnerali */
 .section.third h2,
 .section.four h2{
@@ -331,16 +340,47 @@ nav li .greenline{
   border-radius: 50%;
 }
 
-/* media sezioni main central */
+/* media sezioni main  */
+@media all and (max-height: 350px){
+  #maintop{
+    display: none;
+  }
+  #maincentral{
+    height: calc(100vh - 91px);
+  }
+}
+
+@media all and (max-width: 899px){
+  .section.third ul li:last-child{
+    display: none;
+  }
+
+  .section.four ul li:last-child{
+    display: none;
+  }
+}
 @media all and (min-width: 733px) and (max-width: 870px){
   .section.second li{
     max-width: calc((100% / 4) - 20px);
+  }
+
+  .section.second ul li:last-child,
+  .section.second ul li:nth-child(5){
+    display: none;
   }
 }
 
 @media all and (max-width: 732px){
   .section.second li{
     max-width: calc((100% / 2) - 20px);
+  }
+
+  .section.second ul li:nth-child(3),
+  .section.second ul li:nth-child(4),
+  .section.second ul li:nth-child(5),
+  .section.second ul li:last-child
+  {
+    display: none;
   }
 }
 
@@ -353,6 +393,10 @@ footer{
   justify-content: space-between;
   position: relative;
   z-index: 900;
+}
+
+footer i:hover{
+  color: #34ec72;
 }
 
 .barra{
